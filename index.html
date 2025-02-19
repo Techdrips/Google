@@ -109,6 +109,32 @@
         randomImage.style.display = 'block';
         return randomImage;
       }
+          <input type="text" id="searchInput" placeholder="Search...">
+    <button onclick="performSearch()">Search</button>
+    
+    <div id="result"></div>
+    <div id="definition" class="definition">
+        <strong>Definition:</strong> <span id="definitionText"></span>
+    </div>
+
+    <script>
+        function performSearch() {
+            var query = document.getElementById("searchInput").value.toLowerCase();
+            var result = document.getElementById("result");
+            var definition = document.getElementById("definition");
+            var definitionText = document.getElementById("definitionText");
+
+            // Your fake search results
+            result.innerHTML = "Fake search results for \"" + query + "\"";
+
+            // Check for the specific word
+            if (query === "yourSpecificWord") {
+                definitionText.innerHTML = "This is the definition of your specific word.";
+                definition.style.display = "block";
+            } else {
+                definition.style.display = "none";
+            }
+        
     </script>
   </head>
   <body>
